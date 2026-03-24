@@ -1,1 +1,662 @@
-<html><head><title>Lovegevity Test</title></head><body><h1>Go Live Test</h1><p>Testing Vercel project creation</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Already Planning Weddings for Free? Get Paid for It. | Lovegevity LWPI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --charcoal: #1a1a1a;
+  --charcoal-deep: #0d0d0d;
+  --cream: #faf8f5;
+  --gold: #c9a96e;
+  --gold-light: #dfc08e;
+  --gold-dim: rgba(201,169,110,0.15);
+  --taupe: #b5a99a;
+  --blush: #e8d5d0;
+  --burgundy: #722f37;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-body);background:var(--charcoal);color:var(--cream);line-height:1.6;overflow-x:hidden}
+
+/* GRAIN */
+.grain-overlay{position:fixed;inset:0;pointer-events:none;z-index:999;opacity:0.03;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:180px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;padding:1.1rem 4rem;display:flex;align-items:center;justify-content:space-between;background:rgba(13,13,13,0.88);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,169,110,0.12)}
+.nav-logo{font-family:var(--font-display);font-size:1.3rem;font-weight:600;color:var(--cream);text-decoration:none;letter-spacing:0.1em}
+.nav-logo span{color:var(--gold)}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{font-size:0.72rem;font-weight:500;letter-spacing:0.15em;text-transform:uppercase;color:var(--taupe);text-decoration:none;transition:color 0.3s}
+.nav-links a:hover{color:var(--gold)}
+.nav-cta{background:transparent;border:1px solid var(--gold);color:var(--gold);font-size:0.72rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;padding:0.6rem 1.4rem;text-decoration:none;transition:all 0.3s}
+.nav-cta:hover{background:var(--gold);color:var(--charcoal)}
+
+/* HERO */
+#hero{position:relative;min-height:100vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1519741497674-611481863552?w=1800&q=80');background-size:cover;background-position:center 35%;animation:slowZoom 20s ease-out forwards}
+@keyframes slowZoom{from{transform:scale(1.06)}to{transform:scale(1.0)}}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,13,13,0.93) 0%,rgba(13,13,13,0.72) 55%,rgba(13,13,13,0.88) 100%)}
+.hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:9rem 4rem 6rem;width:100%}
+.hero-badge{display:inline-flex;align-items:center;gap:0.75rem;font-size:0.68rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,169,110,0.35);padding:0.4rem 1rem 0.4rem 0.75rem;margin-bottom:2.25rem;animation:fadeUp 0.8s ease both}
+.hero-badge-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);animation:pulse 2s ease infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:0.5;transform:scale(0.8)}}
+h1.hero-headline{font-family:var(--font-display);font-size:clamp(3rem,7vw,5.5rem);font-weight:400;line-height:1.04;color:var(--cream);max-width:760px;margin-bottom:1.5rem;animation:fadeUp 0.9s ease 0.15s both}
+h1.hero-headline em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:1.05rem;font-weight:300;color:var(--taupe);max-width:500px;line-height:1.8;margin-bottom:2.75rem;animation:fadeUp 0.9s ease 0.3s both}
+.hero-ctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp 0.9s ease 0.45s both}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--charcoal);font-family:var(--font-body);font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none}
+.btn-primary:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 32px rgba(201,169,110,0.35)}
+.btn-ghost{display:inline-block;border:1px solid rgba(250,248,245,0.25);color:var(--cream);font-family:var(--font-body);font-size:0.78rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;padding:1rem 2.25rem;text-decoration:none;transition:all 0.3s}
+.btn-ghost:hover{border-color:rgba(250,248,245,0.6)}
+.hero-trust{margin-top:4.5rem;display:flex;align-items:center;gap:2.75rem;flex-wrap:wrap;animation:fadeUp 0.9s ease 0.6s both}
+.trust-divider{width:1px;height:28px;background:rgba(181,169,154,0.25)}
+.trust-item{display:flex;flex-direction:column}
+.trust-num{font-family:var(--font-display);font-size:1.6rem;font-weight:600;color:var(--gold);line-height:1}
+.trust-lbl{font-size:0.66rem;font-weight:400;letter-spacing:0.12em;text-transform:uppercase;color:var(--taupe);margin-top:0.2rem}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.rd1{transition-delay:0.1s}.rd2{transition-delay:0.2s}.rd3{transition-delay:0.3s}.rd4{transition-delay:0.4s}
+
+/* SECTION BASE */
+.s-inner{max-width:1200px;margin:0 auto;padding:6.5rem 4rem}
+.s-label{font-size:0.68rem;font-weight:500;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);display:flex;align-items:center;gap:0.75rem;margin-bottom:1.25rem}
+.s-label::before{content:'';display:block;width:22px;height:1px;background:var(--gold)}
+h2.s-head{font-family:var(--font-display);font-size:clamp(2rem,4vw,3.25rem);font-weight:400;line-height:1.12;margin-bottom:1.25rem}
+h2.s-head em{font-style:italic;color:var(--gold)}
+.s-sub{font-size:0.95rem;font-weight:300;color:var(--taupe);max-width:540px;line-height:1.8}
+
+/* PAIN SECTION */
+#pain{background:var(--charcoal);border-top:1px solid var(--gold-dim)}
+.pain-grid{display:grid;grid-template-columns:1fr 1fr;margin-top:3.5rem;border:1px solid var(--gold-dim)}
+.pain-card{padding:2.5rem 2.25rem;border-right:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim);transition:background 0.3s}
+.pain-card:nth-child(even){border-right:none}
+.pain-card:nth-child(n+3){border-bottom:none}
+.pain-card:hover{background:rgba(201,169,110,0.04)}
+.pain-n{font-family:var(--font-display);font-size:2.75rem;font-weight:300;color:rgba(201,169,110,0.18);line-height:1;margin-bottom:0.75rem}
+.pain-q{font-family:var(--font-display);font-size:1.2rem;font-style:italic;font-weight:400;color:var(--cream);line-height:1.45;margin-bottom:0.6rem}
+.pain-body{font-size:0.85rem;color:var(--taupe);line-height:1.7}
+
+/* BRIDGE */
+#bridge{background:var(--cream);color:var(--charcoal)}
+#bridge .s-label{color:var(--burgundy)}
+#bridge .s-label::before{background:var(--burgundy)}
+#bridge h2.s-head em{color:var(--burgundy)}
+#bridge .s-sub{color:#5a4f48}
+.bridge-grid{display:grid;grid-template-columns:1fr 1fr;gap:5.5rem;align-items:center}
+.bridge-img-wrap{position:relative}
+.bridge-img{width:100%;aspect-ratio:3/4;object-fit:cover;display:block}
+.bridge-img-caption{position:absolute;bottom:0;left:0;right:0;padding:1.25rem 1.5rem;background:var(--charcoal);color:var(--cream);font-family:var(--font-display);font-style:italic;font-size:0.9rem}
+.bridge-quote{font-family:var(--font-display);font-size:1.55rem;font-weight:400;font-style:italic;line-height:1.5;color:var(--charcoal);border-left:3px solid var(--burgundy);padding-left:1.75rem;margin:2rem 0}
+.bridge-list{list-style:none;margin-top:1.5rem}
+.bridge-list li{display:flex;align-items:flex-start;gap:0.75rem;font-size:0.9rem;color:#3d3530;margin-bottom:1rem;line-height:1.6}
+.bridge-list li::before{content:'→';color:var(--gold);font-family:var(--font-display);font-size:1rem;flex-shrink:0;margin-top:0.1rem}
+
+/* CREDIBILITY BAND */
+#cred{background:#111;border-top:1px solid var(--gold-dim);border-bottom:1px solid var(--gold-dim)}
+#cred .s-inner{display:flex;align-items:center;gap:6rem}
+.cred-left{flex:1.1;min-width:0}
+#cred h2.s-head em{color:var(--gold)}
+#cred .s-sub{color:var(--taupe)}
+.cred-stats{flex:1;display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--gold-dim)}
+.cred-stat{background:#111;padding:2.25rem 1.75rem;text-align:center}
+.cred-num{font-family:var(--font-display);font-size:2.6rem;font-weight:600;color:var(--gold);display:block;line-height:1}
+.cred-desc{font-size:0.72rem;color:var(--taupe);letter-spacing:0.08em;margin-top:0.3rem;text-transform:uppercase}
+
+/* STEPS */
+#steps{background:var(--charcoal)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--gold-dim);margin-top:3.5rem}
+.step-card{background:var(--charcoal);padding:2.75rem 2.25rem;position:relative;overflow:hidden;transition:background 0.3s}
+.step-card::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent);transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.step-card:hover{background:#1e1e1e}
+.step-card:hover::after{transform:scaleX(1)}
+.step-n{font-family:var(--font-display);font-size:4rem;font-weight:300;color:rgba(201,169,110,0.13);line-height:1;margin-bottom:1.25rem}
+.step-title{font-family:var(--font-display);font-size:1.25rem;font-weight:400;color:var(--cream);margin-bottom:0.75rem}
+.step-body{font-size:0.875rem;color:var(--taupe);line-height:1.75}
+
+/* FEATURES */
+#features{background:var(--cream);color:var(--charcoal)}
+#features .s-label{color:var(--gold)}
+#features h2.s-head em{color:var(--burgundy)}
+#features .s-sub{color:#5a4f48}
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3.5rem}
+.feat-card{background:#fff;padding:2.25rem 2rem;border:1px solid rgba(0,0,0,0.07);transition:transform 0.3s,box-shadow 0.3s;position:relative;overflow:hidden}
+.feat-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),var(--burgundy));transform:scaleX(0);transform-origin:left;transition:transform 0.4s}
+.feat-card:hover{transform:translateY(-4px);box-shadow:0 14px 48px rgba(0,0,0,0.1)}
+.feat-card:hover::before{transform:scaleX(1)}
+.feat-icon{width:44px;height:44px;background:rgba(201,169,110,0.1);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;font-size:1.15rem}
+.feat-title{font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--charcoal);margin-bottom:0.6rem}
+.feat-body{font-size:0.85rem;color:#6b5f55;line-height:1.75}
+
+/* TESTIMONIALS */
+#testimonials{background:#111;position:relative;overflow:hidden}
+#testimonials::before{content:'"';position:absolute;top:-3rem;left:-1rem;font-family:var(--font-display);font-size:28rem;font-style:italic;color:rgba(201,169,110,0.035);pointer-events:none;line-height:1}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--gold-dim);margin-top:3.5rem}
+.testi-card{background:#111;padding:2.5rem 2rem}
+.testi-stars{color:var(--gold);font-size:0.8rem;letter-spacing:0.25em;margin-bottom:1.25rem}
+.testi-quote{font-family:var(--font-display);font-size:1.05rem;font-style:italic;color:var(--cream);line-height:1.72;margin-bottom:1.75rem}
+.testi-author{display:flex;align-items:center;gap:0.9rem}
+.testi-avatar{width:44px;height:44px;border-radius:50%;object-fit:cover;border:1px solid rgba(201,169,110,0.3)}
+.testi-name{font-size:0.78rem;font-weight:600;color:var(--cream);letter-spacing:0.05em}
+.testi-role{font-size:0.72rem;color:var(--taupe);margin-top:0.15rem}
+
+/* PRICING */
+#pricing{background:var(--cream);color:var(--charcoal)}
+#pricing .s-label{color:var(--gold);justify-content:center}
+#pricing h2.s-head{text-align:center;max-width:600px;margin-left:auto;margin-right:auto}
+#pricing h2.s-head em{color:var(--burgundy)}
+#pricing .s-sub{margin:1rem auto 0;text-align:center;color:#5a4f48}
+.pricing-wrap{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;max-width:860px;margin:3.5rem auto 0}
+.p-card{padding:2.75rem 2.25rem;border:1px solid rgba(0,0,0,0.1);background:#fff;position:relative}
+.p-card.featured{background:var(--charcoal);color:var(--cream);border-color:transparent}
+.p-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--charcoal);font-size:0.62rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;padding:0.28rem 1rem;white-space:nowrap}
+.p-name{font-family:var(--font-display);font-size:1.1rem;font-weight:400;margin-bottom:0.5rem}
+.p-price{font-family:var(--font-display);font-size:3rem;font-weight:600;color:var(--charcoal);line-height:1;margin:1rem 0 0.4rem}
+.p-card.featured .p-price{color:var(--gold)}
+.p-period{font-size:0.78rem;color:var(--taupe);margin-bottom:1.75rem}
+.p-card.featured .p-period{color:rgba(181,169,154,0.7)}
+.p-list{list-style:none;margin-bottom:2rem}
+.p-list li{display:flex;align-items:flex-start;gap:0.65rem;font-size:0.875rem;color:#4a3f36;margin-bottom:0.8rem;line-height:1.5}
+.p-card.featured .p-list li{color:var(--taupe)}
+.p-list li::before{content:'✓';color:var(--gold);font-weight:700;flex-shrink:0}
+.p-btn{display:block;text-align:center;padding:0.95rem;font-family:var(--font-body);font-size:0.76rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;cursor:pointer;border:none;width:100%}
+.p-btn-outline{border:1px solid var(--charcoal);background:transparent;color:var(--charcoal)}
+.p-btn-outline:hover{background:var(--charcoal);color:var(--cream)}
+.p-btn-gold{background:var(--gold);color:var(--charcoal)}
+.p-btn-gold:hover{background:var(--gold-light);transform:translateY(-2px);box-shadow:0 8px 28px rgba(201,169,110,0.35)}
+
+/* FAQ */
+#faq{background:var(--charcoal)}
+.faq-wrap{max-width:760px;margin-top:3.5rem}
+.faq-item{border-bottom:1px solid rgba(201,169,110,0.12);padding:1.75rem 0;cursor:pointer}
+.faq-q{font-family:var(--font-display);font-size:1.05rem;font-weight:400;color:var(--cream);display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;user-select:none}
+.faq-icon{color:var(--gold);font-size:1.2rem;flex-shrink:0;transition:transform 0.3s;line-height:1.05}
+.faq-item.open .faq-icon{transform:rotate(45deg)}
+.faq-a{font-size:0.88rem;color:var(--taupe);line-height:1.8;max-height:0;overflow:hidden;transition:max-height 0.4s ease,margin-top 0.3s}
+.faq-item.open .faq-a{max-height:300px;margin-top:1rem}
+
+/* FORM SECTION */
+#enroll{background:#111}
+.enroll-wrap{max-width:520px;margin:3rem auto 0;background:rgba(255,255,255,0.02);border:1px solid rgba(201,169,110,0.18);padding:2.75rem}
+.f-group{margin-bottom:1.25rem}
+.f-label{display:block;font-size:0.7rem;font-weight:500;letter-spacing:0.12em;text-transform:uppercase;color:var(--taupe);margin-bottom:0.5rem}
+.f-input{width:100%;background:rgba(255,255,255,0.04);border:1px solid rgba(201,169,110,0.18);color:var(--cream);font-family:var(--font-body);font-size:0.9rem;padding:0.8rem 1rem;outline:none;transition:border-color 0.3s;-webkit-appearance:none}
+.f-input:focus{border-color:var(--gold)}
+.f-input::placeholder{color:rgba(181,169,154,0.35)}
+.f-success{display:none;text-align:center;color:var(--gold);font-family:var(--font-display);font-style:italic;font-size:1.2rem;padding:1.25rem 0}
+
+/* FINAL CTA */
+#final-cta{background:linear-gradient(135deg,#19130a 0%,#241a08 50%,#19130a 100%);border-top:1px solid rgba(201,169,110,0.18);border-bottom:1px solid rgba(201,169,110,0.18);text-align:center;position:relative;overflow:hidden}
+#final-cta::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 90% 80% at 50% 50%,rgba(201,169,110,0.07) 0%,transparent 65%)}
+.cta-head{font-family:var(--font-display);font-size:clamp(2rem,5vw,4rem);font-weight:400;color:var(--cream);line-height:1.1;margin-bottom:1rem;position:relative}
+.cta-head em{font-style:italic;color:var(--gold)}
+.cta-sub{font-size:0.95rem;color:var(--taupe);max-width:480px;margin:0 auto 2.5rem;line-height:1.8;position:relative}
+.cta-trust{margin-top:1.75rem;font-size:0.76rem;color:rgba(181,169,154,0.5);letter-spacing:0.06em;position:relative}
+
+/* FOOTER */
+footer{background:var(--charcoal-deep);padding:4.5rem 4rem 2.5rem;border-top:1px solid rgba(201,169,110,0.1)}
+.footer-inner{max-width:1200px;margin:0 auto}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:3rem;margin-bottom:2rem;border-bottom:1px solid rgba(201,169,110,0.08)}
+.footer-brand{font-family:var(--font-display);font-size:1.35rem;font-weight:600;color:var(--cream);letter-spacing:0.1em;margin-bottom:0.9rem}
+.footer-brand span{color:var(--gold)}
+.footer-tagline{font-size:0.85rem;color:var(--taupe);line-height:1.7;max-width:260px}
+.footer-col-title{font-size:0.65rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);margin-bottom:1rem}
+.footer-links{list-style:none}
+.footer-links li{margin-bottom:0.65rem}
+.footer-links a{font-size:0.84rem;color:var(--taupe);text-decoration:none;transition:color 0.3s}
+.footer-links a:hover{color:var(--cream)}
+.footer-bottom{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-legal{font-size:0.72rem;color:rgba(181,169,154,0.45)}
+.footer-accent{font-family:var(--font-display);font-style:italic;font-size:0.85rem;color:rgba(201,169,110,0.35)}
+</style>
+<style>section,header,.hero,[class*="hero"],[class*="section"]{opacity:1!important;transform:none!important;visibility:visible!important;}</style></head>
+<body>
+
+<div class="grain-overlay"></div>
+
+<!-- NAV -->
+<nav>
+  <a href="#hero" class="nav-logo">LOVE<span>GEVITY</span></a>
+  <ul class="nav-links">
+    <li><a href="#steps">How It Works</a></li>
+    <li><a href="#features">Program</a></li>
+    <li><a href="#testimonials">Results</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#faq">FAQ</a></li>
+  </ul>
+  <a href="#enroll" class="nav-cta">Start My Career</a>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      Lovegevity's Wedding Planning Institute
+    </div>
+    <h1 class="hero-headline">
+      Already planning<br>weddings <em>for free?</em><br>Get paid for it.
+    </h1>
+    <p class="hero-sub">
+      You've done it for family. For friends. For years. The only thing missing is the credential — and the confidence to charge what you're worth.
+    </p>
+    <div class="hero-ctas">
+      <a href="#enroll" class="btn-primary">Start My Dream Career</a>
+      <a href="#steps" class="btn-ghost">See How It Works</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-item">
+        <span class="trust-num">25+</span>
+        <span class="trust-lbl">Years of Proven Methods</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">166+</span>
+        <span class="trust-lbl">Countries Represented</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">4.9&#9733;</span>
+        <span class="trust-lbl">From 1,500+ Planners</span>
+      </div>
+      <div class="trust-divider"></div>
+      <div class="trust-item">
+        <span class="trust-num">2,200+</span>
+        <span class="trust-lbl">Accredited College Partners</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAIN -->
+<section id="pain">
+  <div class="s-inner">
+    <div class="reveal">
+      <div class="s-label">Sound Familiar?</div>
+      <h2 class="s-head">You're the one everyone calls.<br><em>But no one's paying you yet.</em></h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal rd1">
+        <div class="pain-n">01</div>
+        <p class="pain-q">"I've been doing this unofficially for years."</p>
+        <p class="pain-body">You're the friend, the cousin, the coworker — always first on the planning committee. Everyone loves your work. Your bank account doesn't reflect that yet.</p>
+      </div>
+      <div class="pain-card reveal rd2">
+        <div class="pain-n">02</div>
+        <p class="pain-q">"I don't know what to charge."</p>
+        <p class="pain-body">You've done the work for free so many times that naming a price now feels terrifying. You don't want to lose the client before you've even started.</p>
+      </div>
+      <div class="pain-card reveal rd3">
+        <div class="pain-n">03</div>
+        <p class="pain-q">"I'm good at this — but I'm not 'official' yet."</p>
+        <p class="pain-body">Imposter syndrome is real. Without credentials, charging premium feels impossible. But the difference between you and a booked planner isn't talent — it's a piece of paper and a system.</p>
+      </div>
+      <div class="pain-card reveal rd4">
+        <div class="pain-n">04</div>
+        <p class="pain-q">"Where do paying clients even come from?"</p>
+        <p class="pain-body">Family referrals only go so far. You know you need to build a real business — but you don't know where to start, what to post, or how to find people who'll actually pay.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRIDGE -->
+<section id="bridge">
+  <div class="s-inner">
+    <div class="bridge-grid">
+      <div class="bridge-img-wrap reveal">
+        <img class="bridge-img" src="https://images.unsplash.com/photo-1464207687429-7505649dae38?w=800&q=80" alt="Elegant wedding reception detail" loading="lazy" />
+        <div class="bridge-img-caption">"Every event you planned — even the ones you did for free — proves you can do this."</div>
+      </div>
+      <div class="bridge-text">
+        <div class="s-label reveal">The Shift</div>
+        <h2 class="s-head reveal">What if you've already been <em>building your portfolio</em> this whole time?</h2>
+        <blockquote class="bridge-quote reveal">
+          "The gap between where you are and your first paid client isn't talent. It's not even experience. It's structure."
+        </blockquote>
+        <p class="s-sub reveal">Certification gives you the credibility to charge. The system gives you the scripts, packages, and contracts to close. LWPI gives you both — in weeks, not years.</p>
+        <ul class="bridge-list reveal">
+          <li>Turn existing experience into a professional portfolio — this weekend</li>
+          <li>Get pricing templates so you never guess what to charge again</li>
+          <li>Earn the credential that makes venues and clients take you seriously</li>
+          <li>Land your first 3 paid clients within 30–60 days of enrolling</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREDIBILITY -->
+<section id="cred">
+  <div class="s-inner">
+    <div class="cred-left">
+      <div class="s-label reveal">Why Lovegevity</div>
+      <h2 class="s-head reveal">The institute that <em>industry professionals</em> trust.</h2>
+      <p class="s-sub reveal" style="margin-top:1rem">We've been training wedding and event professionals since before Pinterest existed. Our credentials are recognized by venues, vendor networks, and accredited colleges worldwide.</p>
+    </div>
+    <div class="cred-stats">
+      <div class="cred-stat reveal">
+        <span class="cred-num">25+</span>
+        <div class="cred-desc">Years Training Planners</div>
+      </div>
+      <div class="cred-stat reveal rd1">
+        <span class="cred-num">166+</span>
+        <div class="cred-desc">Countries Represented</div>
+      </div>
+      <div class="cred-stat reveal rd2">
+        <span class="cred-num">2,200+</span>
+        <div class="cred-desc">College Partners</div>
+      </div>
+      <div class="cred-stat reveal rd3">
+        <span class="cred-num">50K+</span>
+        <div class="cred-desc">Certified Graduates</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="steps">
+  <div class="s-inner">
+    <div class="s-label reveal">The Path</div>
+    <h2 class="s-head reveal">From hobbyist to <em>booked planner</em> — in three steps.</h2>
+    <div class="steps-grid">
+      <div class="step-card reveal rd1">
+        <div class="step-n">01</div>
+        <h3 class="step-title">Get Certified in Weeks</h3>
+        <p class="step-body">Complete our industry-recognized certification at your own pace. Self-paced modules designed around your day job, your family, your life. No classroom. No rigid schedule.</p>
+      </div>
+      <div class="step-card reveal rd2">
+        <div class="step-n">02</div>
+        <h3 class="step-title">Build Your Business Foundation</h3>
+        <p class="step-body">We hand you the packages, pricing templates, contracts, and portfolio recipe. You don't start from zero — you start from a system that already works for 50,000+ certified planners.</p>
+      </div>
+      <div class="step-card reveal rd3">
+        <div class="step-n">03</div>
+        <h3 class="step-title">Book Your First 3 Clients</h3>
+        <p class="step-body">Use our proven outreach scripts and referral frameworks to turn your existing network into paying clients. Most graduates land their first booking within 30–60 days.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section id="features">
+  <div class="s-inner">
+    <div class="s-label reveal">What's Inside</div>
+    <h2 class="s-head reveal">Everything you need to <em>launch and get booked</em> — nothing you don't.</h2>
+    <p class="s-sub reveal">No fluff. No filler. Just the tools, templates, and training that take you from "I should charge for this" to booked and paid.</p>
+    <div class="features-grid">
+      <div class="feat-card reveal rd1">
+        <div class="feat-icon">🎓</div>
+        <h3 class="feat-title">Industry-Recognized Certification</h3>
+        <p class="feat-body">The credential that venues, vendors, and clients respect. Backed by 25 years and 2,200+ accredited college partnerships worldwide.</p>
+      </div>
+      <div class="feat-card reveal rd2">
+        <div class="feat-icon">📋</div>
+        <h3 class="feat-title">Ready-to-Use Business Templates</h3>
+        <p class="feat-body">Pricing packages, client contracts, proposal frameworks — all customizable. Never start with a blank page again.</p>
+      </div>
+      <div class="feat-card reveal rd3">
+        <div class="feat-icon">📸</div>
+        <h3 class="feat-title">Portfolio Builder System</h3>
+        <p class="feat-body">Turn the weddings you've already helped with into a polished, professional portfolio — even if you've never been paid a cent.</p>
+      </div>
+      <div class="feat-card reveal rd1">
+        <div class="feat-icon">💬</div>
+        <h3 class="feat-title">Client Outreach Scripts</h3>
+        <p class="feat-body">The exact DMs, emails, and conversation starters that convert your warm network into your first 3 paying clients. Copy and send.</p>
+      </div>
+      <div class="feat-card reveal rd2">
+        <div class="feat-icon">💰</div>
+        <h3 class="feat-title">Pricing Confidence Module</h3>
+        <p class="feat-body">Exactly how to price your services, what to say when a client pushes back, and how to charge what you're worth — without apology.</p>
+      </div>
+      <div class="feat-card reveal rd3">
+        <div class="feat-icon">🤝</div>
+        <h3 class="feat-title">Global Planner Network</h3>
+        <p class="feat-body">Join 50,000+ certified planners. Get referrals, mentorship, and vendor introductions that would take years to build on your own.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="s-inner">
+    <div class="s-label reveal">Real Results</div>
+    <h2 class="s-head reveal">They were exactly <em>where you are now.</em></h2>
+    <div class="testi-grid">
+      <div class="testi-card reveal rd1">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"I had been planning family weddings for free for almost a decade. Three weeks after completing the program, I booked my first real client — a $2,800 day-of coordination package. I finally feel legitimate."</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1531746020798-e6953c6e8e04?w=100&q=80" alt="Tanya M." loading="lazy" />
+          <div>
+            <div class="testi-name">Tanya M.</div>
+            <div class="testi-role">Certified Wedding Planner — Atlanta, GA</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal rd2">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"I always knew I was good at this. But without credentials, every vendor treated me like 'just the bride's friend.' The certification changed everything — venues actually call me back now."</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80" alt="Keisha R." loading="lazy" />
+          <div>
+            <div class="testi-name">Keisha R.</div>
+            <div class="testi-role">Certified Coordinator — Houston, TX</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal rd3">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testi-quote">"The pricing module alone was worth everything. I went from too scared to quote anything, to charging $3,500 for my first package — and they said yes on the spot. No negotiation."</p>
+        <div class="testi-author">
+          <img class="testi-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Maria S." loading="lazy" />
+          <div>
+            <div class="testi-name">Maria S.</div>
+            <div class="testi-role">Certified Event Planner — Miami, FL</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="s-inner">
+    <div class="s-label reveal">Investment</div>
+    <h2 class="s-head reveal">Choose your <em>path to certified</em> and booked.</h2>
+    <p class="s-sub reveal">Both options include lifetime access, all templates, and our global planner network.</p>
+    <div class="pricing-wrap">
+      <div class="p-card reveal rd1">
+        <p class="p-name">Standard Certification</p>
+        <p class="p-price">$497</p>
+        <p class="p-period">One-time — or 3 payments of $175</p>
+        <ul class="p-list">
+          <li>Full certification curriculum</li>
+          <li>Business launch templates</li>
+          <li>Portfolio builder system</li>
+          <li>Pricing confidence training</li>
+          <li>Community network access</li>
+          <li>Lifetime access to all content</li>
+        </ul>
+        <a href="#enroll" class="p-btn p-btn-outline">Enroll Now</a>
+      </div>
+      <div class="p-card featured reveal rd2">
+        <div class="p-badge">Most Popular</div>
+        <p class="p-name">First 3 Clients Bundle</p>
+        <p class="p-price">$797</p>
+        <p class="p-period">One-time — or 3 payments of $285</p>
+        <ul class="p-list">
+          <li>Everything in Standard</li>
+          <li>Client outreach scripts (10 DMs + email templates)</li>
+          <li>Done-for-you pricing packages</li>
+          <li>Contract and proposal templates</li>
+          <li>1:1 onboarding call with a certified mentor</li>
+          <li>Priority vendor network introductions</li>
+        </ul>
+        <a href="#enroll" class="p-btn p-btn-gold">Get the Full Bundle</a>
+      </div>
+    </div>
+    <p class="reveal" style="text-align:center;margin-top:1.5rem;font-size:0.78rem;color:var(--taupe)">30-day satisfaction guarantee. If you don't love it, we'll make it right.</p>
+  </div>
+</section>
+
+<!-- ENROLL / FORM -->
+<section id="enroll">
+  <div class="s-inner" style="text-align:center">
+    <div class="s-label reveal" style="justify-content:center">Get Started</div>
+    <h2 class="s-head reveal">Ready to turn your gift <em>into income?</em></h2>
+    <p class="s-sub reveal" style="margin:0.75rem auto 0">Request your info packet — we'll send you full program details and help you find the right track.</p>
+    <div class="enroll-wrap reveal">
+      <form id="enrollForm">
+        <div class="f-group">
+          <label class="f-label" for="fname">Your First Name</label>
+          <input class="f-input" id="fname" type="text" placeholder="First name" required>
+        </div>
+        <div class="f-group">
+          <label class="f-label" for="femail">Email Address</label>
+          <input class="f-input" id="femail" type="email" placeholder="your@email.com" required>
+        </div>
+        <div class="f-group">
+          <label class="f-label" for="fexp">How long have you been planning?</label>
+          <select class="f-input" id="fexp" style="cursor:pointer">
+            <option value="" disabled selected>Select your experience level</option>
+            <option>Just starting out</option>
+            <option>1–3 years (unofficially)</option>
+            <option>3–9 years (unofficially)</option>
+            <option>9+ years — it's time to get paid</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary" style="width:100%;margin-top:0.5rem;font-size:0.8rem;padding:1rem;cursor:pointer">Show Me the ONE Thing I'm Missing &rarr;</button>
+      </form>
+      <p class="f-success" id="fSuccess">&#10003; We've received your request. Check your inbox — your next chapter is on its way.</p>
+      <p style="margin-top:1.25rem;font-size:0.72rem;color:rgba(181,169,154,0.4);letter-spacing:0.05em">No spam. Unsubscribe anytime. Your information is never shared.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="s-inner">
+    <div class="s-label reveal">Common Questions</div>
+    <h2 class="s-head reveal">You've probably <em>already thought of these.</em></h2>
+    <div class="faq-wrap">
+      <div class="faq-item reveal" data-faq>
+        <div class="faq-q">Do I need prior experience or education to enroll?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Not at all. Our program is designed for people exactly like you — someone with natural talent, passion, and real-world experience who simply hasn't had formal training. If you've helped plan even one event, you already have what it takes to get started.</div>
+      </div>
+      <div class="faq-item reveal rd1" data-faq>
+        <div class="faq-q">How long does it take to complete the certification?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Most students complete the core certification in 4–8 weeks, studying 5–7 hours per week. It's fully self-paced, so you can go faster or slower depending on your life. The business tools — templates, scripts, pricing — are available the moment you enroll.</div>
+      </div>
+      <div class="faq-item reveal rd2" data-faq>
+        <div class="faq-q">What if I already have 1–2 clients — is this still relevant?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Absolutely. Many of our students already have clients but are stuck on pricing, proposals, or growing beyond friends and family. The program helps you raise your rates, win preferred-vendor status, and build a referral engine that doesn't depend on your personal network.</div>
+      </div>
+      <div class="faq-item reveal rd3" data-faq>
+        <div class="faq-q">Is this certificate recognized by venues and the industry?<span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes. LWPI has been operating for 25+ years with partnerships with 2,200+ accredited colleges worldwide. Our credential is recognized across North America, Europe, and beyond. When you show a venue your LWPI certification, they know exactly who we are.</div>
+      </div>
+      <div class="faq-item reveal rd4" data-faq>
+        <div class="faq-q">What if it doesn't work for me?<span class="faq-icon">+</span></div>
+        <div class="faq-a">We stand behind the program with a 30-day satisfaction guarantee. If you go through the materials and feel it wasn't the right fit, reach out within 30 days and we'll make it right. We want your first investment in yourself to feel like an easy yes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="final-cta">
+  <div class="s-inner" style="text-align:center;position:relative;z-index:2">
+    <h2 class="cta-head reveal">In five years, you could still be<br><em>planning for free.</em><br>Or booked for $250k.</h2>
+    <p class="cta-sub reveal">The talent is already there. The only thing standing between you and your first paid client is the credential, the system, and the confidence to charge. We give you all three.</p>
+    <div class="reveal">
+      <a href="#enroll" class="btn-primary" style="font-size:0.85rem;padding:1.1rem 2.75rem">Start My Dream Career &rarr;</a>
+    </div>
+    <p class="cta-trust reveal">Join 50,000+ graduates in 166+ countries — all of whom started exactly where you are.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <p class="footer-brand">LOVE<span>GEVITY</span></p>
+        <p class="footer-tagline">Lovegevity's Wedding Planning Institute — turning passion into profession since 1999. The industry's most recognized certification for aspiring and established wedding planners.</p>
+      </div>
+      <div>
+        <p class="footer-col-title">Program</p>
+        <ul class="footer-links">
+          <li><a href="#steps">How It Works</a></li>
+          <li><a href="#features">What's Included</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#enroll">Enroll Now</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Company</p>
+        <ul class="footer-links">
+          <li><a href="#cred">About LWPI</a></li>
+          <li><a href="#testimonials">Student Stories</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#enroll">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer-col-title">Legal</p>
+        <ul class="footer-links">
+          <li><a href="#hero">Privacy Policy</a></li>
+          <li><a href="#hero">Terms of Service</a></li>
+          <li><a href="#hero">Refund Policy</a></li>
+          <li><a href="#hero">Accreditation</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">&copy; 2026 Lovegevity's Wedding Planning Institute. All rights reserved.</p>
+      <p class="footer-accent">Learn a Life You Love.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// FAQ accordion
+document.querySelectorAll('[data-faq]').forEach(item => {
+  item.addEventListener('click', () => {
+    const wasOpen = item.classList.contains('open');
+    document.querySelectorAll('[data-faq]').forEach(i => i.classList.remove('open'));
+    if (!wasOpen) item.classList.add('open');
+  });
+});
+
+// Form submit
+document.getElementById('enrollForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  this.style.display = 'none';
+  document.getElementById('fSuccess').style.display = 'block';
+});
+</script>
+<script>;(function(){var last=0,tid=0,nid="artifact-1774312002595-toolu_01JgSmWYqd2N7JjhjuyPd2kP";function send(){var h=Math.max(document.documentElement.scrollHeight,document.body.scrollHeight);if(h>0&&Math.abs(h-last)>2){last=h;window.parent.postMessage({type:"genui-resize",h:h,nid:nid},"*");}}function debounced(){clearTimeout(tid);tid=setTimeout(send,50);}if(window.ResizeObserver){new ResizeObserver(debounced).observe(document.body);}setTimeout(send,0);setTimeout(send,300);setTimeout(send,1000);setTimeout(send,3000);window.addEventListener("message",function(e){if(e.data&&e.data.type==="genui-scroll"){window.scrollBy(e.data.dx||0,e.data.dy||0);}});})();</script></body>
+</html>
